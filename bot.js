@@ -14,17 +14,21 @@ partly.on('message', message => {
     partly.user.setGame(argresult);
       message.channel.send(Playing Now . ${argresult})
   } else 
+
      if (message.content === (adminprefix + "leave")) {
     message.guild.leave();        
   } else  
+
   if (message.content.startsWith(adminprefix + 'wt')) {
   partly.user.setActivity(argresult, {type:'WATCHING'});
       message.channel.send(Watching . ${argresult})
   } else 
+
   if (message.content.startsWith(adminprefix + 'ls')) {
   partly.user.setActivity(argresult , {type:'LISTENING'});
       message.channel.send(Listening to .${argresult})
   } else 
+
   if (message.content.startsWith(adminprefix + 'st')) {
     partly.user.setGame(argresult, "https://www.twitch.tv/paaaaaartly");
       message.channel.send(Now Streaming . ${argresult})
@@ -33,6 +37,7 @@ partly.on('message', message => {
   partly.user.setUsername(argresult).then
       message.channel.send(Chaning Name To ..${argresult} )
 } else
+
 if (message.content.startsWith(adminprefix + 'sa')) {
   partly.user.setAvatar(argresult);
     message.channel.send(Changing Avatar .`);
