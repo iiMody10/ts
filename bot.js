@@ -1,47 +1,19 @@
 const Discord = require('discord.js');
-const partly = new Discord.Client();
-const adminprefix = "#";
-const developers = ['472880961680572446'];
+const client = new Discord.Client();
 
-console.log("Paaaaaaaaaaaartly");
-
-
-partly.on('message', message => {
-    var argresult = message.content.split(`).slice(1).join(' ');
-      if (!developers.includes(message.author.id)) return;
-      
-  if (message.content.startsWith(adminprefix + 'ply')) {
-    partly.user.setGame(argresult);
-      message.channel.send(Playing Now . ${argresult})
-  } else 
-
-     if (message.content === (adminprefix + "leave")) {
-    message.guild.leave();        
-  } else  
-
-  if (message.content.startsWith(adminprefix + 'wt')) {
-  partly.user.setActivity(argresult, {type:'WATCHING'});
-      message.channel.send(Watching . ${argresult})
-  } else 
-
-  if (message.content.startsWith(adminprefix + 'ls')) {
-  partly.user.setActivity(argresult , {type:'LISTENING'});
-      message.channel.send(Listening to .${argresult})
-  } else 
-
-  if (message.content.startsWith(adminprefix + 'st')) {
-    partly.user.setGame(argresult, "https://www.twitch.tv/paaaaaartly");
-      message.channel.send(Now Streaming . ${argresult})
-  }
-  if (message.content.startsWith(adminprefix + 'sn')) {
-  partly.user.setUsername(argresult).then
-      message.channel.send(Chaning Name To ..${argresult} )
-} else
-
-if (message.content.startsWith(adminprefix + 'sa')) {
-  partly.user.setAvatar(argresult);
-    message.channel.send(Changing Avatar .`);
-}
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);  
 });
+
+
+client.on('ready', () => {
+var server = "509529711093874708"; // ايدي السررفر
+var channel = "509529711093874711";//ايدي الروم
+    setInterval(()=>{
+    client.guilds.get(server).channels.get(channel).send('**5kkkkk , 5kkkkk , 5kkkkk , 5kkkkk , 5kkkkk , 5kkkkk , 5kkkkk , 5kkkkk , 5kkkkk , 5kkkkk , 5kkkkk , 5kkkkk , 5kkkkk , 5kkkkk , 5kkkkk , 5kkkkk , 5kkkkk , 5kkkkk , **')
+    },1);
+})
+  
+  
 
 client.login(process.env.BOT_TOKEN);
